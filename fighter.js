@@ -21,6 +21,23 @@ function randomInt(a, b) {
     return a + Math.floor(Math.random() * (b - a));
 }
 
+filterCards = function () {
+    for (var card of cards) {
+        if (
+            searchCondition(card) &&
+            tierCondition(card) &&
+            elementCondition(card) &&
+            fighterCondition(card)
+        ) {
+            card.classList.remove("hidden");
+        }
+        else {
+            card.classList.add("hidden");
+        }
+    }
+    updateFilterCancel();
+};
+
 function fearTheRainbow() {
     for (var card of cards) {
         for (var tier of tiers) {
