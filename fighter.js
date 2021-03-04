@@ -582,12 +582,12 @@ function initDock() {
     function toggleFighterOptions() {
         if (this.classList.contains("glowing")) {
             this.classList.remove("glowing");
-            menu.classList.add("hidden");
+            panel.classList.add("hidden");
         }
         else {
             this.classList.add("glowing");
             filterSort.classList.remove("glowing");
-            menu.classList.remove("hidden");
+            panel.classList.remove("hidden");
             optionsMenu.classList.remove("hidden");
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
@@ -598,12 +598,12 @@ function initDock() {
     function toggleFilterSort() {
         if (this.classList.contains("glowing")) {
             this.classList.remove("glowing");
-            menu.classList.add("hidden");
+            panel.classList.add("hidden");
         }
         else {
             fighterOptions.classList.remove("glowing");
             this.classList.add("glowing");
-            menu.classList.remove("hidden");
+            panel.classList.remove("hidden");
             optionsMenu.classList.add("hidden");
             filterMenu.classList.remove("hidden");
             sortMenu.classList.remove("hidden");
