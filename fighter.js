@@ -3,7 +3,7 @@ var userID, userIP, database;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
+var fighterIDs = ["an", "be", "bb", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 
 var cards = [];
 var filterCards;
@@ -467,7 +467,9 @@ function initLanguageMenu() {
     var buttonSet = document.getElementById("language-menu");
     var buttons = Array.from(buttonSet.getElementsByTagName("input"));
 
-    var savedLanguage = localStorage.getItem("language") || "en";
+//  force english to prevent page breaking
+//  var savedLanguage = localStorage.getItem("language") || "en";
+    var savedLanguage = "en";
     var savedButton = document.getElementById(savedLanguage);
 
     function updateCardConstant(card) {
